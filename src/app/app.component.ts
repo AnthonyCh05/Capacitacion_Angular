@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: "../styles.css"
 })
-export class AppComponent {
-  title = 'bases';
+export class AppComponent implements OnInit{
+  public title: string = 'Hola Mundo';
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
+
 }
