@@ -3,13 +3,23 @@
   class="w-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
 >
   <li
-    class="w-auto px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600"
+    *ngFor="
+      let character of characterList;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even
+    "
+    class="w-auto px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600 bg-blue-300"
   >
-    Krillin - 500
-  </li>
-  <li
-    class="w-auto px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600"
-  >
-    Goku - 10,000
+    <span class="text-blue-500">{{ i + 1 }}.</span>
+
+    <span>{{ character.name }} - </span>
+
+    <strong>Power </strong>
+
+    <span>{{ character.power }}</span>
+
+    <span>Es par: {{ isEven }}</span>
   </li>
 </ul>
