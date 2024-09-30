@@ -5,13 +5,13 @@
   <div class="basis-full">
     <div class="mt-4">
       <dbz-list
-        [characterList]="dbzService.characters"
-        (onDeleteByID)="dbzService.onDeleteCharacter($event)"
+        [characterList]="characters"
+        (onDeleteByID)="onDeleteCharacter($event)"
       ></dbz-list>
     </div>
   </div>
 
   <div class="basis-full px-5">
-    <dbz-form (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-form>
+    <dbz-form (onNewCharacter)="onNewCharacter($event)"></dbz-form>
   </div>
 </div>
