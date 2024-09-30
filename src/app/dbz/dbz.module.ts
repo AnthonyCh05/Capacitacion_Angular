@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './pages/main-page.component';
 import { ListComponent } from './components/list/list.component';
 import { FormComponent } from './components/form/form.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,6 +16,7 @@ import { FormComponent } from './components/form/form.component';
   ],
   imports: [
     CommonModule,
+    FormsModule
   ],
   exports: [
     MainPageComponent,

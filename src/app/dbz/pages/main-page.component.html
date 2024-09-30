@@ -4,11 +4,14 @@
 <div class="flex flex-row mt-5">
   <div class="basis-full">
     <div class="mt-4">
-      <dbz-list [characterList]="characters"></dbz-list>
+      <dbz-list
+        [characterList]="dbzService.characters"
+        (onDeleteByID)="dbzService.onDeleteCharacter($event)"
+      ></dbz-list>
     </div>
   </div>
 
   <div class="basis-full px-5">
-    <dbz-form></dbz-form>
+    <dbz-form (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-form>
   </div>
 </div>
